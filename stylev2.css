@@ -1,0 +1,890 @@
+body{
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logo{
+    width: 40px;
+}
+
+#nav_header{
+    display: block;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+#nav_flex_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.nav_item{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+
+    margin: 0px 8px;
+}
+
+.dropdown_menu_container{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown_menu_container:hover .floating_dropdown_menu{
+    display: inline-block;
+}
+
+.floating_dropdown_menu{
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 23px;
+    right: 10px;
+    background-color: white;
+    border-top: 2px solid rgb(170, 210, 54);
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(102, 102, 102, 0.5);
+}
+
+.floating_dropdown_menu>p{
+    font-size: 14px;
+    padding: 8px 2px;
+    margin: 0px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.floating_dropdown_menu>p:last-child{
+    border: none;
+}
+
+.section_pre_sub_header{/*the small sub-heading before the main heading in a section*/
+    font-family: 'Caveat', cursive;
+    color: #91ac41;
+    font-size: 24px;
+    margin: 0px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.section_header{
+    font-size: 44px;
+    font-weight: 600px;
+    margin: 0px;
+    padding: 8px;
+    text-align: center;
+}
+
+.section_sub_header{
+    font-size: 16px;
+    font-weight: 500;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin: 0px;
+    text-align: center;
+}
+
+/*---------------buttons---------------*/
+.button_main{
+    padding: 10px 32px;
+    text-align: center;
+    background-color: rgb(170, 210, 54);
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.red_button{
+    background-color: #f69dad;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    padding: 17px 40px;
+    cursor: pointer;
+}
+
+.red_button:hover{
+    background-color: rgba(1,1,1,0);
+    border: 1px solid #f69dad;
+    color: #f69dad;
+}
+
+/*--------------heading Section-----------*/
+#landing_section{
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+}
+
+#title_header_container{
+    width: 100%;
+    height: 100%;
+    padding: 0px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/landing-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#title_header_container>h1{
+    max-width: 800px;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing:10px;
+    line-height: 1.2;
+    text-align: center;
+    color: black;
+}
+
+#title_header_container>p{
+    max-width: 1100px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: grey;
+}
+
+#landing_page_scroll_instruction{
+    position: relative;
+    bottom: 85px;
+    font-size: 18px;
+    text-align: center;
+
+    animation-name: down_arrow_movement;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes down_arrow_movement{
+    0%{
+        transform: translateY(-7px);
+    }
+
+    30%{
+        transform: translateY(20px);
+    }
+
+    100%{
+        transform: translateY(-7px);
+    }
+}
+
+/*--------------Steps Section-----------*/
+#steps_section{
+    display: flex;
+    flex-direction: row;
+}
+
+.step_container{
+    color: white;
+    text-align: center;
+    padding: 100px 40px;
+    width: 25%;
+}
+
+.step_icon{
+    font-size: 86px;/*this is being used to increase the size of the vector graphic*/
+    transition: transform 0.2s ease-in;
+}
+
+.step_container:hover .step_icon{
+    transform: scale(1.1,1.1);
+    transition: transform 0.2s linear;
+}
+
+.step_container>h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 22px;
+}
+
+.step_container>p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+#step_1{
+    background-color: #5acda6;
+}
+
+#step_2{
+    background-color: #91ac41;
+}
+
+#step_3{
+    background-color: #e4b476;
+}
+
+#step_4{
+    background-color: #f69dad;
+}
+
+/*------------Benefits Section------------*/
+#benefits_section{
+    background-color: #f7eee2;
+    padding: 110px 70px;
+}
+
+#benefits_flex_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.benefit_container{
+    width: 250px;
+    padding: 100px 20px 50px 20px;
+    text-align: center;
+}
+
+.benefits_icon_continer{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 25px 40px;
+    border-radius: 50%;
+    background-color: #e3b375;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.benefit_container:last-child>.benefits_icon_continer{
+    /*the we-chat icon's size is not equal in width and height so scale the width down by a bit so that the container will not look stretched*/
+    padding: 25px 36.25px;
+}
+
+.benefit_container:hover .benefits_icon_continer{
+    transform: scale(1.1,1.1);
+    transition: all 0.2s linear;
+}
+
+.benefit_container>h3{
+    margin: 20px 0px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+}
+
+.benefit_container>p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin: 0px;
+    text-align: center;
+}
+
+/*----------Reviews Section-----------*/
+#reviews_section{
+    background-color: white;
+    padding: 50px 0px;
+}
+
+#reviews_container{
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 0px;
+    padding-bottom: 0px;
+}
+
+.review_card{
+    display: inline-block;
+    background-color: #f5f6fb;
+    max-width: 350px;
+    border-radius: 30px 0px 30px 30px;
+    padding: 40px;
+    text-align: center;
+    margin: 0px 17px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-out;
+}
+
+.review_card:hover{
+    box-shadow: 0px 8px 22px #57575433;
+    transform: translateY(-20px);
+    transition: all 0.2s linear;
+}
+
+.review_card>img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.review{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin: 20px 0px;
+}
+
+.reviewer_name{
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0px;
+    padding: 4px;
+}
+
+.reviewer_career_title{
+    font-size: 12px;
+    font-style: italic;
+    color: #8b8b99;
+    margin: 0px;
+}
+
+/*----------Follow us section-----------*/
+#left_image_displayer{
+    display: inline-block;
+    width: 67%;
+    height: 850px;
+    background: url("https://mobirise.com/extensions/organicamp/assets/images/19.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#right_container{
+    display: inline-block;
+    width: 33%;
+    height: 850px;
+    margin-left:-4.5px;
+    vertical-align: top;
+    background: url("https://edyoda.s3.ap-south-1.amazonaws.com/public/strawberry-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    box-sizing: border-box;
+    padding: 70px;
+
+}
+
+#right_container>.section_header{
+    text-align: left;
+    padding-left: 0px;
+}
+
+#right_container>.section_sub_header{
+    text-align: left;
+}
+
+#mail_sub_input{
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 17px;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
+#mail_sub_input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+#mail_sub_input:focus:required{
+    outline: none;
+    background-color: rgb(226, 219, 216);
+}
+
+/*-----------metrics section------------*/
+#metrics_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 90px 20px;
+    background-color: #f6fcfa;
+}
+
+.Metric_container{
+    display: inline-block;
+    text-align: center;
+    margin: 0px 60px;
+}
+
+.Metric_container>h3{
+    font-size: 45px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+}
+
+.Metric_container>p{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #57e3b5;
+    margin: 0px;
+}
+
+/*--------Video Section--------*/
+#video_section{
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#video_section>h2{
+    font-weight: 400;
+    font-size: 44px;
+    color: gray;
+    margin: 0px;
+    margin-bottom: 38px;
+}
+
+#line_seperator{
+    display: inline-block;
+    width: 100px;
+    border-bottom: 1px solid orange;
+    margin-bottom: 30px;
+}
+
+#vimeo_video{
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+    margin-left:auto;
+    margin-right:auto;
+    border: none;
+}
+
+/*------------contact section------------*/
+#contact_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 70px 0px;
+}
+
+#address_information_container{
+    display: inline-block;
+    width: 600px;
+}
+
+#contact_section .section_pre_sub_header{
+    text-align: left;
+}
+#contact_section .section_header{
+    text-align: left;
+    font-weight: 700;
+    padding-left: 0px;
+}
+#contact_section .section_sub_header{
+    text-align: left;
+}
+
+.address{
+    font-size: 16px;
+    font-weight: 500;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    margin: 32px 0px;
+    text-align: left;
+}
+
+.address::first-line{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+
+#contact_form_container{
+    display: inline-block;
+    width: 500px;
+    /*vertical-align: top;*/
+}
+
+.contact_info_input_element,.message_box{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.contact_info_input_element,.message_box::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact_info_input_element:focus,.message_box:focus{
+    outline: 2px dashed rgb(170, 210, 54);
+}
+
+#contact_form_container .button_main{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 13px 32px;
+    cursor: pointer;
+}
+
+/*----------footer-----------*/
+footer{
+    background-color: black;
+    padding: 25px 150px;
+}
+
+footer>p{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.developer_link{
+    font-weight: bold;
+    color: inherit;
+}
+
+/*------------Layout for small vertical screens-------------*/
+@media (max-width: 1080px) {
+    .nav_item{
+        display: none;
+    }
+
+    nav>:last-child{
+        display: inline-block;
+    }
+
+    #nav_flex_wrapper .button_main{
+        padding: 10px 32px;
+        font-size: 18px;
+    }
+
+    /*------header section-----*/
+    #nav_header{
+        padding: 20px;
+    }
+
+    /*------landing section-----*/
+    #landing_page_scroll_instruction{
+        font-size: 20px;
+        bottom: 100px;
+    }
+
+    /*-------Steps section-------*/
+    #steps_section{
+        flex-direction: column;
+    }
+    
+    .step_container{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /*------benefits section-----*/
+    #benefits_flex_wrapper{
+        flex-direction: column;
+    }
+    .benefit_container{
+        width: 100%;
+        padding: 50px 20px 25px 20px;
+    }
+
+    /*------reviews section-----*/
+    #reviews_container{
+        flex-direction: column;
+        padding: 0px;
+        padding-top: 50px;
+        margin: 0px;
+        padding-left: 45px;
+        padding-right: 45px;
+        box-sizing: border-box;
+    }
+    
+    .review_card{
+        max-width: none;
+        margin-bottom: 40px;
+    }
+
+    .review_card:last-child{
+        margin-bottom: 0px;
+    }
+/*----------Follow us section-----------*/
+    #left_image_displayer{
+        display: block;
+        width: 100%;
+        height: 500px;
+    }
+
+    #right_container{
+        display: block;
+        width: 100%;
+        height: 500px;
+        margin: 0px;
+        padding: 30px;
+        background-position: center;
+    }
+
+    #right_container>.section_header{
+        font-size: 50px;
+    }
+
+    #right_container>.section_sub_header{
+        font-size: 20px;
+    }
+
+    #mail_sub_input{
+        margin-top: 75px;
+        margin-bottom: 23px;
+        padding: 18px 14px;
+        border-radius: 8px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    #right_container .red_button{
+        border-radius: 6px;
+        font-size: 18px;
+        padding: 20px 50px;
+    }
+
+    /*-----------metrics section------------*/
+    #metrics_section{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    .Metric_container{
+        margin: 30px 0px;
+    }
+    
+    /*------------contact section------------*/
+    #contact_section{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    #address_information_container{
+        display: block;
+        width: 100%;
+    }
+
+    #contact_form_container{
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    } 
+
+    #contact_form_container form{
+        box-sizing: border-box;
+    }
+
+    .contact_info_input_element,.message_box{
+        border-width: 2px;
+        font-size: 18px;
+        padding: 24px;
+        margin: 24px 0px;
+    }
+
+    #contact_form_container .button_main{
+        font-size: 18px;
+        padding: 18px 40px;
+    }
+}
+
+/*This code block below is a scaled up version of the media query above*/
+
+/* @media (max-width: 1080px) {
+    .nav_item{
+        display: none;
+    }
+
+    nav>:last-child{
+        display: inline-block;
+    }
+
+    #logo{
+        width: 60px;
+    }
+
+    #nav_flex_wrapper .button_main{
+        padding: 16px 54px;
+        font-size: 24px;
+    }
+
+    /*------header section-----
+    #nav_header{
+        padding: 35px 30px;
+    }
+
+    #steps_section{
+        flex-direction: column;
+    }
+    
+    .step_container{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /*------landing section-----
+    #title_header_container>h1{
+        max-width: 800px;
+        font-size: 72px;
+        letter-spacing: 26px;
+    }
+    
+    #title_header_container>p{
+        font-size: 40px;
+    }
+    
+    #landing_page_scroll_instruction{
+        font-size: 32px;
+        bottom: 120px;
+    }
+
+    /*------benefits section-----
+    #benefits_flex_wrapper{
+        flex-direction: column;
+    }
+    .benefit_container{
+        width: 100%;
+        padding: 50px 20px 25px 20px;
+    }
+
+    /*------reviews section-----
+    #reviews_container{
+        flex-direction: column;
+        padding: 0px;
+        padding-top: 50px;
+        margin: 0px;
+        padding-left: 45px;
+        padding-right: 45px;
+        box-sizing: border-box;
+    }
+    
+    .review_card{
+        max-width: none;
+        margin-bottom: 40px;
+    }
+
+    .review_card:last-child{
+        margin-bottom: 0px;
+    }
+/*----------Follow us section-----------
+    #left_image_displayer{
+        display: block;
+        width: 100%;
+        height: 500px;
+    }
+
+    #right_container{
+        display: block;
+        width: 100%;
+        height: 700px;
+        margin: 0px;
+        padding: 30px;
+        background-position: center;
+    }
+
+    #right_container>.section_header{
+        font-size: 72px;
+    }
+
+    #right_container>.section_sub_header{
+        font-size: 40px;
+    }
+
+    #mail_sub_input{
+        margin-top: 120px;
+        margin-bottom: 34px;
+        padding: 30px;
+        border-radius: 8px;
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    #right_container .red_button{
+        border-radius: 8px;
+        font-size: 32px;
+        padding: 37px 80px;
+    }
+
+    /*-----------metrics section------------
+    #metrics_section{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    .Metric_container{
+        margin: 30px 00px;
+    }
+    
+    /*------------contact section------------
+    #contact_section{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    #address_information_container{
+        display: block;
+        width: 100%;
+    }
+
+    #contact_form_container{
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    } 
+
+    #contact_form_container form{
+        box-sizing: border-box;
+    }
+
+    .contact_info_input_element,.message_box{
+        border-width: 2px;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        padding: 40px;
+        margin: 40px 0px;
+    }
+
+    .contact_info_input_element:focus,.message_box:focus{
+        outline-width: 4px;
+    }
+
+    #contact_form_container .button_main{
+        font-size: 30px;
+        padding: 26px 64px;
+    }
+} */
